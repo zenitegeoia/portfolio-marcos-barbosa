@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
 </head>
 <body class="smooth-scroll">
     
@@ -20,7 +22,7 @@
     <header class="header" id="header">
         <div class="container header-inner">
             <a href="#" class="logo-group">
-                <img src="assets/logo-marcos-babrosa-menu-footer.png" alt="Marcos Barbosa" class="logo-img-header">
+                <img src="assets/logo-marcos-babrosa-menu-footer.png" alt="Marcos Barbosa" class="logo-img-header" width="1796" height="876">
                 <span class="logo-subtitle">Presença digital que gera negócios</span>
             </a>
             <a href="https://wa.me/5544997769301?text=Ol%C3%A1%2C%20Marcos%21%20Vi%20seu%20trabalho%20e%20quero%20entender%20como%20um%20novo%20site%20pode%20ajudar%20minha%20empresa%20a%20atrair%20mais%20clientes." 
@@ -38,7 +40,7 @@
         <div class="hero-background">
             <picture>
                 <!-- Fallback mobile if needed later: <source media="(max-width: 768px)" srcset="assets/marcos-barbosa-hero-mobile.webp"> -->
-                <img src="assets/marcos-barbosa-hero.webp" alt="Marcos Barbosa" class="hero-img">
+                <img src="assets/marcos-barbosa-hero.webp" alt="Marcos Barbosa" class="hero-img" width="1920" height="1080">
             </picture>
             <div class="hero-overlay"></div>
             <div class="hero-gradient-bottom"></div>
@@ -168,7 +170,7 @@
                         <div class="browser-mockup">
                             <div class="browser-header"><i></i><i></i><i></i></div>
                             <div class="browser-content scroll-image-wrapper">
-                                <img src="assets/screencapture-institutovenanzi-br-2026-07-26-18_07_52.webp" alt="Instituto Venanzi" class="scroll-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="assets/screencapture-institutovenanzi-br-2026-07-26-18_07_52.webp" alt="Instituto Venanzi" class="scroll-image" loading="lazy" width="1432" height="9422" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="fallback-image">[IMAGEM REAL NECESSÁRIA]</div>
                             </div>
                         </div>
@@ -190,7 +192,7 @@
                         <div class="browser-mockup">
                             <div class="browser-header"><i></i><i></i><i></i></div>
                             <div class="browser-content scroll-image-wrapper">
-                                <img src="assets/screencapture-maringataxi-br-2026-07-26-18_08_36.webp" alt="Central Táxi" class="scroll-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="assets/screencapture-maringataxi-br-2026-07-26-18_08_36.webp" alt="Central Táxi" class="scroll-image" loading="lazy" width="1432" height="5939" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="fallback-image">[IMAGEM REAL NECESSÁRIA]</div>
                             </div>
                         </div>
@@ -209,7 +211,7 @@
                         <div class="browser-mockup">
                             <div class="browser-header"><i></i><i></i><i></i></div>
                             <div class="browser-content scroll-image-wrapper full-height">
-                                <img src="assets/screencapture-massagebienetrecannes-fr-2026-07-26-18_52_38.webp" alt="Massage Bien-Être Cannes" class="scroll-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="assets/screencapture-massagebienetrecannes-fr-2026-07-26-18_52_38.webp" alt="Massage Bien-Être Cannes" class="scroll-image" loading="lazy" width="1421" height="11640" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="fallback-image">[IMAGEM REAL NECESSÁRIA]</div>
                             </div>
                         </div>
@@ -225,7 +227,7 @@
                         <div class="browser-mockup">
                             <div class="browser-header"><i></i><i></i><i></i></div>
                             <div class="browser-content scroll-image-wrapper short">
-                                <img src="assets/screencapture-gesegurancaeletronica-br-2026-07-26-18_09_04.webp" alt="GE Segurança" class="scroll-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="assets/screencapture-gesegurancaeletronica-br-2026-07-26-18_09_04.webp" alt="GE Segurança" class="scroll-image" loading="lazy" width="1432" height="6000" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="fallback-image">[IMAGEM]</div>
                             </div>
                         </div>
@@ -238,7 +240,7 @@
                         <div class="browser-mockup">
                             <div class="browser-header"><i></i><i></i><i></i></div>
                             <div class="browser-content scroll-image-wrapper short">
-                                <img src="assets/screencapture-metalurgicaforjamaringa-br-2026-07-26-18_17_28.webp" alt="Forja Maringá" class="scroll-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="assets/screencapture-metalurgicaforjamaringa-br-2026-07-26-18_17_28.webp" alt="Forja Maringá" class="scroll-image" loading="lazy" width="1432" height="6000" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="fallback-image">[IMAGEM]</div>
                             </div>
                         </div>
@@ -352,7 +354,7 @@
             <div class="about-visual fade-in">
                 <!-- Imagem do Marcos -->
                 <div class="photo-space">
-                    <img src="assets/marcos-barbosa.webp" alt="Marcos Barbosa" class="about-img">
+                    <img src="assets/marcos-barbosa.webp" alt="Marcos Barbosa" class="about-img" loading="lazy" width="1080" height="1350">
                 </div>
             </div>
             <div class="about-content fade-up">
@@ -460,7 +462,7 @@
         <div class="container footer-container">
             
             <div class="footer-wordmark-wrapper fade-in">
-                <img src="assets/logo-marcos-babrosa-menu-footer.png" alt="Marcos Barbosa" class="logo-img-footer">
+                <img src="assets/logo-marcos-babrosa-menu-footer.png" alt="Marcos Barbosa" class="logo-img-footer" loading="lazy" width="1796" height="876">
             </div>
             
             <a href="https://wa.me/5544997769301?text=Ol%C3%A1%2C%20Marcos%21%20Quero%20colocar%20minha%20empresa%20na%20frente%20e%20atrair%20mais%20oportunidades." 
