@@ -106,4 +106,84 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // 6. Calculator Logic
+    const ticketInput = document.getElementById('ticketMedio');
+    const clientesInput = document.getElementById('clientesPerdidos');
+    const calcPlaceholder = document.getElementById('calcPlaceholder');
+    const calcValues = document.getElementById('calcValues');
+    const resultMonthly = document.getElementById('resultMonthly');
+    const resultYearly = document.getElementById('resultYearly');
+    const calcCTA = document.getElementById('calcCTA');
+
+    if (ticketInput && clientesInput) {
+        let ticketValue = 0;
+        let clientesValue = 0;
+
+        const formatBRL = (value) => {
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                minimumFractionDigits: 2
+            }).format(value);
+        };
+
+        const formatTicketInput = (rawValue) => {
+            const digits = rawValue.replace(/\D/g, '');
+            if (digits === '') {
+                ticketValue = 0;
+                return '';
+            }
+            
+            const numValue = parseInt(digits, 10) / 100;
+            ticketValue = numValue;
+            
+            if (numValue === 0) {
+                return '';
+            }
+            
+            return formatBRL(numValue);
+        };
+
+        const updateCalculator = () => {
+            if (ticketValue > 0 && clientesValue > 0) {
+                const monthly = ticketValue * clientesValue;
+                const yearly = monthly * 12;
+                resultMonthly.textContent = formatBRL(monthly);
+                resultYearly.textContent = formatBRL(yearly);
+                calcPlaceholder.style.display = 'none';
+                calcValues.style.display = 'block';
+
+                const message = `Olá, Marcos! Fiz a calculadora da sua landing page.\n\nMeu ticket médio é de ${formatBRL(ticketValue)}.\nEstimo perder ${clientesValue} clientes por mês.\nO potencial calculado foi de ${formatBRL(monthly)} por mês.\n\nQuero entender como uma presença digital melhor pode ajudar minha empresa.`;
+                calcCTA.href = `https://wa.me/5544997769301?text=${encodeURIComponent(message)}`;
+            } else {
+                calcPlaceholder.style.display = 'block';
+                calcValues.style.display = 'none';
+            }
+        };
+
+        ticketInput.addEventListener('input', (e) => {
+            const formatted = formatTicketInput(e.target.value);
+            e.target.value = formatted;
+            updateCalculator();
+        });
+
+        clientesInput.addEventListener('input', (e) => {
+            let val = e.target.value.replace(/\D/g, '');
+            if (val === '') {
+                clientesValue = 0;
+                e.target.value = '';
+            } else {
+                clientesValue = parseInt(val, 10);
+                e.target.value = clientesValue;
+            }
+            updateCalculator();
+        });
+
+        ticketInput.addEventListener('keydown', (e) => {
+            if (e.key === '-' || e.key === 'e') e.preventDefault();
+        });
+        clientesInput.addEventListener('keydown', (e) => {
+            if (e.key === '-' || e.key === '.' || e.key === 'e') e.preventDefault();
+        });
+    }
 });
